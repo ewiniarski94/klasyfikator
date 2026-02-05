@@ -15,4 +15,5 @@ def predict(data: IrisData):
     ]])
 
     prediction = model.predict(input_data)
-    return {"prediction": int(prediction[0])}
+    class_names = ['setosa', 'versicolor', 'virginica']
+    return {"prediction": int(prediction[0]), "class_names": class_names[int(prediction[0])]}
